@@ -8,7 +8,7 @@ int main(int argc, char* argv[])
 {
     using namespace std;
    
-    vector<string> cmdlineargs(argv+1, argv+argc);
+    vector<string> cmdlineargs { argv+1, argv+argc };
     string flag {};
    
     for(const auto &arg : cmdlineargs) {
