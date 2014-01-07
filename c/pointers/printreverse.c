@@ -4,20 +4,13 @@
 
 int main(int argc, char *argv[])
 {
-    char **arg = argv + argc - 1;
-   
-    while( arg > argv ) {
-        char *sptr = *arg + strlen(*arg) - 1;
-
-        while( sptr >= *arg ) {
+    for(char **arg = argv + argc - 1; arg > argv; --arg) {
+        for(char *sptr = *arg + strlen(*arg) - 1; sptr >= *arg; --sptr ) {
             printf("%c", *sptr);
-            --sptr;
         }
-
         printf("\n");
-        --arg;
     }
-   
+  
     printf("\n");
    
     return EXIT_SUCCESS;
