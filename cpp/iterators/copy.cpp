@@ -14,10 +14,11 @@ void doCopy(const std::string infilename, const std::string outfilename={})
     
     if(!infile) {
         cout << "Unable to open input file: " << infilename << endl;
-        exit(1);
+        exit(EXIT_FAILURE);
     }
     
     ofstream outfile { };
+    
     ostream *output = nullptr;
     
     if( outfilename.empty() ) {
@@ -30,7 +31,7 @@ void doCopy(const std::string infilename, const std::string outfilename={})
         
         if(!outfile) {
             cout << "Unable to open output file: " << outfilename << endl;
-            exit(1);
+            exit(EXIT_FAILURE);
         }
         
         output = &outfile;
@@ -62,7 +63,9 @@ int main(int argc, char *argv[])
         break;
         
         default:
-            cout << "Should we even reach here?" << endl;
+            cout << "You cany only copy from one source to one destination." << endl;
+            cout << "Usage: " << argv[0] << " <source file> <destination file>" << endl;
+            exit(EXIT_FAILURE);
         break;
     }
     
