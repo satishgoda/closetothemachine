@@ -7,7 +7,7 @@ int main(int argc, char* argv[])
 {
     using namespace std;
    
-    vector<string> cmdlineargs(argv+1, argv+argc);
+    vector<string> cmdlineargs {argv+1, argv+argc};
    
     for(auto rbiterv=cmdlineargs.rbegin(); rbiterv != cmdlineargs.rend(); ++rbiterv) {
         auto& arg = *rbiterv;
