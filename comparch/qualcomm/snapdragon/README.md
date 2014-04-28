@@ -17,6 +17,7 @@
 # Devices
 
 * http://www.samsung.com/in/galaxygrand2
+* http://www.gsmarena.com/samsung_galaxy_grand_2-3d-spin-5862.php
 * http://www.devicespecifications.com/en/model/ffd22b84
 * http://www.fonearena.com/blog/93886/samsung-galaxy-grand-2-benchmarks.html
 
